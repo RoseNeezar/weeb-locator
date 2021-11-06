@@ -23,6 +23,7 @@ class AnimeRepository {
 
       return animeModelFromJson(response.data);
     } on DioError catch (e) {
+      print(e);
       if (e.response!.data != null) {
         throw e.response!.data;
       } else {
